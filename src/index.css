@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-roku-50: #faf5ff;
+  --color-roku-100: #f3e8ff;
+  --color-roku-200: #e9d5ff;
+  --color-roku-300: #d8b4fe;
+  --color-roku-400: #c084fc;
+  --color-roku-500: #a855f7;
+  --color-roku-600: #9333ea;
+  --color-roku-700: #7e22ce;
+  --color-roku-800: #6b21a8;
+  --color-roku-900: #581c87;
+  --color-roku-brand: #4b286d;
+  --color-roku-accent: #662d91;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 min-h-svh bg-[#2d1050] font-sans text-white antialiased;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 50% -30%, rgba(168, 85, 247, 0.35), transparent 55%),
+      radial-gradient(ellipse 80% 50% at 100% 50%, rgba(91, 33, 182, 0.25), transparent 45%),
+      radial-gradient(ellipse 60% 40% at 0% 80%, rgba(147, 51, 234, 0.2), transparent 40%),
+      linear-gradient(180deg, #2d1050 0%, #3b1768 35%, #2d1050 100%);
+    background-attachment: fixed;
+  }
+  #root {
+    @apply min-h-svh w-full text-white;
+  }
+}
